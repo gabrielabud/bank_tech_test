@@ -10,8 +10,7 @@
   }
 
   TransactionList.prototype.saveTransactions = function(transaction) {
-    this._tranList.push(transaction);
-    return this._tranList;
+    this._tranList.unshift(transaction);
   };
 
   exports.TransactionList = TransactionList;
