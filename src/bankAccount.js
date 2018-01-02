@@ -5,6 +5,7 @@
   function BankAccount() {
     this._balance = 0;
     this._allTransactions = new TransactionList();
+    this._balanceHistory = [];
   };
 
   BankAccount.prototype.balance = function() {
@@ -23,6 +24,7 @@
       var transaction = new Transaction( new Date(), "credit", amount);
       this._allTransactions.saveTransactions(transaction);
       this._balance += amount;
+      this._balanceHistory.push(this._balance);
   };
 
   BankAccount.prototype.withdraw = function(amount) {
@@ -30,6 +32,7 @@
       var transaction = new Transaction( new Date(), "debit", amount);
       this._allTransactions.saveTransactions(transaction);
       this._balance -= amount;
+      this._balanceHistory.push(this._balance);
     } else {
       throw new Error("Insufficient funds, Balance stands at " + this.balance());
     }
