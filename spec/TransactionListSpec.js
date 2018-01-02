@@ -9,4 +9,10 @@ describe("TransactionList", function() {
   it("has empty list", function(){
     expect(list._tranList).toEqual([])
   });
+
+  it("saves initial transactions", function(){
+    list.saveTransactions(transaction);
+    expect(list.showTransactions()).toEqual([transaction])
+  });
+
 });
