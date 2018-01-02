@@ -15,4 +15,11 @@ describe("TransactionList", function() {
     expect(list.showTransactions()).toEqual([transaction])
   });
 
+  it("saves more transactions", function(){
+    list.saveTransactions(transaction);
+    list.saveTransactions(transaction);
+    expect(list.showTransactions().length).toBeGreaterThan(1);
+  });
+
+
 });
