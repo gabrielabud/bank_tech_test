@@ -12,4 +12,8 @@ describe("BankAccount", function() {
   it("when initialising is an object of type BankAccount", function() {
     expect(account).toEqual(jasmine.any(BankAccount));
   });
+
+  it("when initialising has a transaction list", function() {
+    expect(account.allTransactions()).toEqual(jasmine.any(TransactionList));
+  });
 });
