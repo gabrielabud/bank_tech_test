@@ -8,15 +8,15 @@
     this._amount = amount;
   };
 
-  Transaction.prototype.date = function () {
+  Transaction.prototype.date = function() {
     return this._date;
   };
 
-  Transaction.prototype.typeTran = function () {
+  Transaction.prototype.typeTran = function() {
     return this._typeTran;
   };
 
-  Transaction.prototype.amount = function () {
+  Transaction.prototype.amount = function() {
     return this._amount;
   };
 

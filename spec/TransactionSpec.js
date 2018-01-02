@@ -2,7 +2,7 @@ describe("Transaction", function() {
   var a;
 
   beforeEach(function() {
-    a = new Transaction("02/01/2012","debit",1000)
+    a = new Transaction("02/01/2012", "debit", 1000)
   });
 
   it("has date", function() {

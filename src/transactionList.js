@@ -5,7 +5,7 @@
     this._tranList = [];
   };
 
-  TransactionList.prototype.showTransactions = function () {
+  TransactionList.prototype.showTransactions = function() {
     return this._tranList;
   }
 
