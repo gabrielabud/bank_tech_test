@@ -41,14 +41,15 @@
   BankAccount.prototype.showStatement = function() {
     var statement = ["date      || credit || debit || balance"];
     var transactions = this._allTransactions.showTransactions().reverse();
+    var balanceHist = this._balanceHistory.reverse();
     for (var i=0; i<transactions.length; i++) {
       var d = transactions[i].date();
       var formatedDate = d.toLocaleDateString();
       if (transactions[i].typeTran() === "debit") {
-        var item = formatedDate + "     0        " + transactions[i].amount()
+        var item = formatedDate + "     0        " + transactions[i].amount() +"      "+ balanceHist[i];
         statement.push(item);
       } else {
-        var item = formatedDate + "      " + transactions[i].amount() + "      0 ";
+        var item = formatedDate + "      " + transactions[i].amount() + "      0      "+ balanceHist[i];;
         statement.push(item)
       }
     }
