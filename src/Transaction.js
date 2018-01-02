@@ -2,9 +2,9 @@
 
 (function(exports){
 
-  function Transaction(date, type, amount) {
+  function Transaction(date, typeTran, amount) {
     this._date = date;
-    this._typeTran = type;
+    this._typeTran = typeTran;
     this._amount = amount;
   };
 
