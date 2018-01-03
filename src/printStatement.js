@@ -13,10 +13,10 @@
       var d = this._transactions[i].date();
       var formatedDate = d.toLocaleDateString();
       if (this._transactions[i].typeTran() === "debit") {
-        var item = formatedDate + "     0        " + this._transactions[i].amount() +"      "+ this._balances[i];
+        var item = formatedDate + "              " + this._transactions[i].amount().toFixed(2) +"      "+ this._balances[i].toFixed(2);
         statement.push(item);
       } else {
-        var item = formatedDate + "      " + this._transactions[i].amount() + "      0      "+ this._balances[i];;
+        var item = formatedDate + "      " + this._transactions[i].amount().toFixed(2) + "             "+ this._balances[i].toFixed(2);
         statement.push(item)
       }
     }

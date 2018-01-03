@@ -8,16 +8,12 @@
     this._balanceHistory = [];
   };
 
-  BankAccount.prototype.balance = function() {
-    return this._balance;
-  };
-
-  BankAccount.prototype.allTransactions = function() {
-    return this._allTransactions;
-  };
-
   BankAccount.prototype.sufficientFunds = function(amount) {
     return this._balance >= amount;
+  };
+
+  BankAccount.prototype.balanceHistory = function() {
+    return this._balanceHistory;
   };
 
   BankAccount.prototype.deposit = function(amount) {
@@ -34,12 +30,12 @@
       this._balance -= amount;
       this._balanceHistory.unshift(this._balance);
     } else {
-      throw new Error("Insufficient funds, Balance stands at " + this.balance());
+      throw new Error("Insufficient funds, Balance stands at " + this._balance);
     }
   };
 
   BankAccount.prototype.showStatement = function() {
-    var printStatement = new PrintStatement(this._allTransactions.showTransactions(), this._balanceHistory);
+    var printStatement = new PrintStatement(this._allTransactions.showTransactions(), this.balanceHistory());
     return printStatement.print();
   };
 

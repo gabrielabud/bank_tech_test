@@ -6,7 +6,7 @@ describe("BankAccount", function() {
   });
 
   it("has a zero balance", function() {
-    expect(account.balance()).toEqual(0)
+    expect(account._balance).toEqual(0)
   });
 
   it("when initialising is an object of type BankAccount", function() {
@@ -14,6 +14,6 @@ describe("BankAccount", function() {
   });
 
   it("when initialising has a transaction list", function() {
-    expect(account.allTransactions()).toEqual(jasmine.any(TransactionList));
+    expect(account._allTransactions).toEqual(jasmine.any(TransactionList));
   });
 });
