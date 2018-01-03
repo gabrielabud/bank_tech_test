@@ -45,5 +45,12 @@ describe("BankAccount", function() {
       account.withdraw(200);
       expect(account._balance).toEqual(300);
     });
+
+    it("the balance is added to the balance history", function() {
+      account.deposit(500);
+      account.withdraw(200);
+      console.log(account._balanceHistory);
+      expect(account._balanceHistory[0]).toEqual(300);
+    });
   })
 });
