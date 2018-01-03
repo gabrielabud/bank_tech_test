@@ -32,7 +32,7 @@ describe("BankAccount", function() {
       expect(account._balanceHistory[0]).toEqual(1200);
     });
 
-    it("add one transaction to the transaction list", function() {
+    it("adds one transaction to the transaction list", function() {
       account.deposit(500, transaction);
       expect(account._transactionList.showTransactions()).toContain(transaction);
     });
@@ -51,7 +51,7 @@ describe("BankAccount", function() {
       expect(account._balanceHistory[0]).toEqual(300);
     });
 
-    it("add one transaction to the transaction list", function() {
+    it("adds one transaction to the transaction list", function() {
       account.deposit(500);
       account.withdraw(100, transaction);
       expect(account._transactionList.showTransactions()).toContain(transaction);

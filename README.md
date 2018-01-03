@@ -24,4 +24,17 @@ $ open SpecRunner.html
 
 -> Open the browser console.
 ```
-![App](/images/app.png)
+![App](/images/console.png)
+![App](/images/tests.png)
+
+## Approach
+I have designed the objects and their interaction, by having the single-responsibility principle in mind.
+
+Objects and their responsibilities
+
+- Transaction: records amount, date and type debit/credit.
+- TransactionList: save transactions.
+- BankAccount: deposits, withdrawal, keeping balance history, showing statement.
+- PrintStatement: takes the lists of transactions and balance history and prints them in a statement format.
+
+As further improvement, I could also extract balance as a separate object and option for the user to input the date.

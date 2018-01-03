@@ -20,7 +20,7 @@ describe("PrintStatement", function() {
     printSt = new PrintStatement(transactions, balances);
   });
 
-  it("then initialising is an object of PrintStatement", function(){
+  it("when initialising is an object of PrintStatement", function(){
     expect(printSt).toEqual(jasmine.any(PrintStatement));
   });
 
