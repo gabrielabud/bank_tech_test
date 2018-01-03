@@ -20,12 +20,9 @@ date || credit || debit || balance
 ## Instructions on how to use the app
 
 ```
-git clone https://github.com/gabrielabud/bank_tech_test
-```
+$ git clone https://github.com/gabrielabud/bank_tech_test
+$ cd bank_tech_test
+$ open SpecRunner.html
 
-```bash
-bundle install
-
-# Running the tests (
-open http://localhost:3000/
+-> Open the browser console.
 ```
