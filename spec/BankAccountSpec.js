@@ -29,7 +29,6 @@ describe("BankAccount", function() {
     it("the balance is added to the balance history", function() {
       account.deposit(500);
       account.deposit(700);
-      console.log(account._balanceHistory);
       expect(account._balanceHistory[0]).toEqual(1200);
     });
 
@@ -49,7 +48,6 @@ describe("BankAccount", function() {
     it("the balance is added to the balance history", function() {
       account.deposit(500);
       account.withdraw(200);
-      console.log(account._balanceHistory);
       expect(account._balanceHistory[0]).toEqual(300);
     });
 
