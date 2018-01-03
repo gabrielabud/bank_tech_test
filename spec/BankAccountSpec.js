@@ -38,4 +38,12 @@ describe("BankAccount", function() {
       expect(account._transactionList.showTransactions()).toContain(transaction);
     });
   })
+
+  describe("When withdrawing money", function() {
+    it("the balance is decreased", function() {
+      account.deposit(500);
+      account.withdraw(200);
+      expect(account._balance).toEqual(300);
+    });
+  })
 });
