@@ -58,5 +58,14 @@ describe("BankAccount", function() {
       account.withdraw(100, transaction);
       expect(account._transactionList.showTransactions()).toContain(transaction);
     });
+
+    it("you can't withdraw more than your balance", function() {
+      account.deposit(500);
+      expect( function () { account.withdraw(600); }).toThrow(new Error("Insufficient funds, Balance stands at 500"));
+    });
   })
+
+  it("prints statement", function() {
+    expect(account.showStatement()).toEqual("date      || credit || debit || balance");
+  });
 });
